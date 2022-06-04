@@ -6,4 +6,8 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Resource Include="image\d60638555be8adb6f4f9.jpg" />
+  </ItemGroup>
+
 </Project>

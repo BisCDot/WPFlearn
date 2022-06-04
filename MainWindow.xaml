@@ -6,10 +6,26 @@
         xmlns:local="clr-namespace:WpfLearn"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <TextBox x:Name="txbSource" VerticalAlignment="Top" Text="{Binding ButtonName}">
-        </TextBox>
-        <TextBox x:Name="txbBinding" VerticalAlignment="Center" Text="{Binding Path=Text,ElementName=txbSource}"></TextBox>
-        <Button x:Name="btnBinding" VerticalAlignment="Bottom" Content="{Binding ButtonName}"></Button>
-    </Grid>
+    <StackPanel Margin="10">
+        <Label FontWeight="Bold">Application</Label>
+        <CheckBox Name="cbFeatureAbc" Checked="cbFeature_CheckedChanged" Unchecked="cbFeature_CheckedChanged">
+            <TextBlock>
+                Enable feature <Run Foreground="Aqua" FontWeight="Bold">ABC</Run>
+            </TextBlock>
+        </CheckBox>
+        <CheckBox  Name="cbFeatureXyz" Checked="cbFeature_CheckedChanged" Unchecked="cbFeature_CheckedChanged">
+            <WrapPanel>
+                <TextBlock>
+                    Enable feature <Run FontWeight="Bold" >XYZ</Run>
+                </TextBlock>
+                <Image Source="image/d60638555be8adb6f4f9.jpg" Width="16" Height="16" Margin="5,0"></Image>
+            </WrapPanel>
+        </CheckBox>
+        <CheckBox Name="cbFeatureWww" Checked="cbFeature_CheckedChanged" Unchecked="cbFeature_CheckedChanged">
+            <TextBlock>
+                Enable feature <Run Foreground="Blue" TextDecorations="Underline" FontWeight="Bold">WWW</Run>
+            </TextBlock>
+        </CheckBox>
+        <CheckBox Name="cbAllFeatures" Checked="cbAllFeatures_CheckedChanged" Unchecked="cbAllFeatures_CheckedChanged">Enable all</CheckBox>
+    </StackPanel>
 </Window>
